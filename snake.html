@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <link rel="stylesheet" type="text/css" href="../../templates/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <script type="text/javascript" src="../../templates/jquery_min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="snake.css">
+    <script type="text/javascript" src="snake.js"></script>
+    
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <h1></h1>
+        <span id="score">Score: 0</span>
+        <div class="grid">
+        </div>
+        <div class="startgame">
+          <button class="start">Start</button>
+        </div>
+        <div class="gameover">
+            <p class="msg">Game over</p>
+            <p class="finalscore"></p>
+            <button class="again">Play again?</button>
+          </div>
+        <div class="controls">
+          <button id="up"><i class="fa fa-arrow-up fa-5x"></i></button>
+          <button id="left"><i class="fa fa-arrow-left fa-5x"></i></button><!--
+       --><button id="down"><i class="fa fa-arrow-down fa-5x"></i></button><!--
+       --><button id="right"><i class="fa fa-arrow-right fa-5x"></i></button>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
