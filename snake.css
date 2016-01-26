@@ -36,7 +36,7 @@ h1 {
   background-color: rgb(59, 47, 102);
 }
 .fade {
-  -moz-transition: background 0.9s linear;
+  transition: background 0.9s linear;
 }
 .food {
   background-color: silver;
@@ -60,16 +60,16 @@ h1 {
   color: silver;
   padding: 5px;
 }
-#up {
+#a38 {
   display: block;
   margin: 0 auto;
   border-radius: 10px 10px 0 0;
 
 }
-#left {
+#a37 {
   border-radius: 10px 0 0 10px;
 }
-#right {
+#a39 {
   border-radius: 0 10px 10px 0;
 }
 #score {

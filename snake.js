@@ -1,6 +1,6 @@
 var size = 20;
 var snake = [[10, 10], [10, 9], [10, 8]];
-var direction = "ArrowRight";
+var direction = 39;
 var food = [];
 var faster = 0;
 var gameisover = false;
@@ -8,7 +8,7 @@ var gameisover = false;
 function resetvar(){
   $('#score').html("Score: 0");
   snake = [[10, 10], [10, 9], [10, 8]];
-  direction = "ArrowRight";
+  direction = 39;
   faster = 0;
   gameisover = false;
 }
@@ -84,16 +84,16 @@ function eat(){
 }
 function go(direction){
   switch(direction) {
-    case "ArrowUp":
+    case 38:
       snakemove(-1, 0);       
       break;
-    case "ArrowDown":
+    case 40:
       snakemove(1, 0);  
       break;
-    case "ArrowLeft":
+    case 37:
       snakemove(0, -1); 
       break;
-    case "ArrowRight":
+    case 39:
       snakemove(0, 1); 
       break;
   }
@@ -129,9 +129,9 @@ function play(){
   addfood();
   start();
 }
-function pressButton(direction){
-  id = direction.slice(5).toLowerCase();
-  $("#"+id).addClass("shadow").delay(200).queue(function(){
+function pressButton(id){
+  // id = direction.slice(5).toLowerCase();
+  $("#a"+id).addClass("shadow").delay(200).queue(function(){
     $(this).removeClass("shadow").dequeue();
   });
 }
@@ -147,9 +147,9 @@ $(document).ready(function() {
     $(".gameover").hide();
     play();
   })
-  $("body").keypress(function(e){
-    direction = e.key;
-    pressButton(direction);
+  $("body").keydown(function(e){
+    direction = e.keyCode; //*
+    pressButton(direction); //*
     });
   $("button").mousedown(function(){
     $(this).addClass("shadow");
@@ -157,17 +157,17 @@ $(document).ready(function() {
   $("button").mouseup(function(){
     $(this).removeClass("shadow");
   });
-  $('#left').click(function(){
-    direction = "ArrowLeft";
+  $('#a37').click(function(){
+    direction = 37;
   });
-  $('#right').click(function(){
-    direction = "ArrowRight";
+  $('#a39').click(function(){
+    direction = 39;
   });
-  $('#up').click(function(){
-    direction = "ArrowUp";
+  $('#a38').click(function(){
+    direction = 38;
   });
-  $('#down').click(function(){
-    direction = "ArrowDown";
+  $('#a40').click(function(){
+    direction = 40;
   });
 });
 
